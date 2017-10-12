@@ -1,0 +1,632 @@
+/* * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * */
+
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Header
+* * * * * * * * * * * * * * * * * * * * */
+header {
+    height: 90px;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo-container {
+  margin-top: 5px;
+  float: left;
+}
+
+header .logo-container span {
+    float: right;
+    margin-left: 4px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: "Amatic SC", cursive;
+    color: #5d473f;
+}
+
+header .logo-container p {
+  font-size: 20px;
+}
+
+header nav  {
+    float: right;
+    margin-top: 12px;
+}
+
+header a {
+    padding: 22px 10px;
+    display: inline-block;  /*so we can style it*/
+    text-transform: uppercase;
+    color: #88685d;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Amatic SC", cursive;
+}
+
+header a:hover {
+    color: #5d473f;
+    transform: scale(1.35);
+}
+
+@media (max-width: 808px) {
+   header a:hover {
+       color: black;
+       transform: scale(1.1);
+   }
+}
+
+header .hamburger-container {
+    padding-top: 20px;
+    color: #5d473f;
+}
+
+header li {
+  display: inline-block;
+}
+.search {
+  background:#88685d;
+}
+
+@media (max-width: 808px) {
+   header .logo-container span{
+      font-size: 60px;
+   }
+}
+
+@media (max-width: 700px) {
+   header .logo-container span{
+      font-size: 40px;
+   }
+}
+
+
+
+/*   JS   */
+
+.menu {
+  position: fixed;
+  background: #cc6a8e;
+  height: 100vh;
+  width: 150px;
+}
+
+.open {
+  right: 0;
+  top: -2px;
+}
+
+.close {
+right: -150px;
+z-index: 100;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * */
+.hero {
+    height: 600px;
+    background: url("../img/books.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 40px 0;
+    margin-top: 90px;
+}
+
+.hero .content-container {
+    width: 50%;
+}
+
+.hero h1 {
+  font-family: "Amatic SC", cursive;
+  color: #5d473f;
+  font-size: 80px;
+  margin: 0;
+
+}
+
+.hero p {
+    font-size: 25px;
+    font-family: "Noto Sans" sans-serif;
+}
+
+.call-to-action {
+    color: #ebeaa8;
+    background: #cc6a8e;
+    padding: 22px;
+    margin: 40px;
+    display: inline-block;
+    border-radius: 17px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-align: justify;
+    margin-left: 0px;
+}
+
+.call-to-action:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 700px) {
+
+    .hero {
+        height: 400px;
+    }
+    .hero-container {
+        width: 80%;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+Main
+* * * * * * * * * * * * * * * * * * * * */
+
+main {
+    min-height: 400px;
+    padding: 30px 0;
+    color: #5d473f;
+}
+
+.description {
+  color: beige;
+  font-size: 20px;
+  margin-top: 25px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+}
+
+.pic1 {
+  background: url("../img/red-car.jpg");
+  height: 500px;
+  background-size: cover;
+  text-align: center;
+  margin-top: 20px;
+  float: left;
+}
+
+.pic2 {
+  background: url("../img/cubes.jpg");
+  height: 500px;
+  background-size: cover;
+  text-align: center;
+  margin-top: 20px;
+  float: left;
+}
+
+.pic3 {
+  background: url("../img/toy.jpg");
+  height: 500px;
+  background-size: cover;
+  text-align: center;
+  margin-top: 20px;
+  float: left;
+}
+
+.pic1:hover, .pic2:hover, .pic3:hover {
+  color: white;
+  text-shadow: 5px 10px 40px white;
+  transform: translateY(22px);
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: 0.1s;
+}
+
+@media (max-width: 700px) {
+   .pic1:hover, .pic2:hover, .pic3:hover {
+      transform: none;
+   }
+}
+.pic1:hover .description,
+.pic2:hover .description,
+.pic3:hover .description  {
+color: white;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Footer
+* * * * * * * * * * * * * * * * * * * * */
+footer {
+    background: grey
+}
+
+footer a {
+  color: white;
+  font-size: 13px;
+  line-height: 2em;
+}
+
+footer h3 {
+  color: white;
+  font-weight: 300;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+footer table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: 16px;
+  }
+
+  footer img {
+    display: inline-block;
+    width: 62px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+
+  footer .column {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+
+  }
+  footer form button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 12px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background: white;
+    color: #776966;
+    transform: translateX(3px);
+    font-weight: bold;
+  }
+
+/*********************************************
+Contact Page
+**********************************************/
+.input-container {
+  margin-bottom: 60px;
+}
+
+.signup-form label {
+  margin-left: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.signup-form input, .signup-form textarea {
+  padding: 10px 20px;
+  background: #222;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+}
+
+.signup-form textarea {
+  width: 300px;
+  height: 300px;
+  resize: none;
+}
+
+/*   ABOUT PAGE  */
+
+.hero-about {
+  height: 450px;
+  background: url("../img/bus.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 40px 0;
+  margin-top: 90px;
+}
+
+.content-container-about {
+  color: white;
+  font-size: 3.2em;
+  font-weight: bolder;
+  padding-top: 280px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about1 , .about2  {
+  margin: 15px;
+  border-radius: 15px;
+  background: #4b6a48;
+  font-family: "Ubuntu", sans-serif;
+  padding: 20px;
+  color: white;
+}
+
+.image1 {
+  background: url("../img/about1-first.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 40px 0;
+  height: 300px;
+
+}
+.image2 {
+  background: url("../img/about1-second.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 40px 0;
+  height: 300px;
+}
+.image3 {
+  background: url("../img/about1-third.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 40px 0;
+  height: 300px;
+}
+.image4 {
+  background: url("../img/about1-fourth.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 40px 0;
+  height: 300px;
+}
+.about1-first p, .about1-second p,
+.about1-third p, .about1-fourth p {
+   font-size: 2em;
+   text-align: center;
+   transition: 0.5s;
+   transform: translateY(85px);
+   opacity: 0;
+}
+
+.about1-first:hover p, .about1-second:hover p,
+.about1-third:hover p, .about1-fourth:hover p {
+  transform: translateY(0px);
+  text-shadow: 2px 2px 20px #fff;
+  opacity: 1;
+}
+
+.footer-about {
+  background: #4b6a48;
+}
+
+/*  PRODUCT PAGE */
+
+.not-index-background {
+  background:
+    url("../img/puzzle.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 40px 0;
+  margin-top: 90px;
+}
+
+.some-cheesy-invitation {
+  background: linear-gradient(
+    180deg,
+    rgba(214, 143, 40, 0.85),
+    rgba(104, 121, 165, 1));
+  color: white;
+  font-size: 1.8em;
+  border-radius: 15px;
+  padding: 10px;
+  padding-left: 22px;
+}
+
+main h2 {
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+main .blue {
+  background: #6879a5;
+  border-radius: 15px;
+}
+main .yellow {
+  background: linear-gradient(
+    180deg,
+    rgba(214, 143, 40, 0.85),
+    rgba(104, 121, 165, 1));
+  border-radius: 15px;
+}
+
+.card {
+    display: inline-block;
+    border-radius: 18px;
+    text-align: center;
+    height: 270px;
+    background: #d68f28;
+    overflow: hidden;
+}
+
+.box1 {
+  background: url("../img/crib.png");
+}
+
+.box2 {
+  background: url("../img/gifts.png");
+}
+
+.box3 {
+  background: url("../img/ess.png");
+}
+
+.box4 {
+  background: url("../img/horse.png");
+}
+
+.box5 {
+    background: url("../img/single-piramida.png");
+  }
+
+  .box6 {
+      background: url("../img/couple-little-toys.png");
+  }
+
+  .box7 {
+      background: url("../img/bath.png");
+  }
+
+  .box8 {
+      background: url("../img/softb.png");
+  }
+
+  .box9 {
+      background: url("../img/poezd.png");
+  }
+
+  .box10 {
+      background: url("../img/constructor.png");
+  }
+
+  .box11 {
+      background: url("../img/doll.png");
+  }
+
+  .box12 {
+      background: url("../img/weird-robot.png");
+  }
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8,
+.box9, .box10, .box11, .box12 {
+  height: 270px;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 30px 15px;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 18px 5px #6879a5;
+}
+
+.card p {
+  font-size: 1.4em;
+  display: inline-block;
+  color: #0d1635;
+  font-family: serif;
+  transition: 0.6s;
+  text-shadow: 2px 2px 5px #000;
+  text-transform: uppercase;
+  transform: translateY(-5px);
+}
+
+.card:hover p {
+  color: #9a1f4e;
+  text-shadow: 2px 2px 10px #000;
+  transform: translateY(18px);
+  font-size: 1.6em;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.box i {
+    display: block;
+    margin-top: 10px;
+}
+
+.products {
+    background: linear-gradient(
+    180deg,
+    rgba(214, 143, 40, 0.85),
+    rgba(104, 121, 165, 1));
+  }
+
+
+  /* CONTACT PAGE */
+
+  .hero-contact {
+    height: 600px;
+    background:
+            url("../img/alarm-clock.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 40px 0;
+    margin-top: 90px;
+  }
+
+  .signup-form label {
+    margin-right: 10px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.signup-form input, .signup-form textarea {
+    padding: 10px 10px;
+    background: #ddd;
+    border: none;
+    color: #000;
+    width: 100%;
+    outline: none;
+    margin: 5px auto;
+}
+
+.signup-form textarea {
+    height:300px;
+    width: 100%;
+    margin: 10px auto;
+    resize: none;
+}
+
+.signup-form button {
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  background: #666;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  border: none;
+  transition: 0.5s;
+  box-shadow: 2px 2px 20px #444;
+  border-radius: 15px;
+  padding: 10px 15px;
+  background: lightgrey;
+}
